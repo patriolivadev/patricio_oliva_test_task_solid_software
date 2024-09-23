@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: InkWell(
         onTap: changeBackgroundColor,
         child: AnimatedContainer(
-          duration: const Duration(seconds: 1),
+          duration: const Duration(milliseconds: 500),
           color: backgroundColor,
           child: const Center(
             child: Text(
