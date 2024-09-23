@@ -54,7 +54,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-
   void changeBackgroundColor() {
     setState(() {
       backgroundColor = getRandomColor();
