@@ -8,8 +8,10 @@ void main() {
 
     final animatedContainer =
         tester.widget<AnimatedContainer>(find.byType(AnimatedContainer));
+
+    final boxDecoration = animatedContainer.decoration as BoxDecoration?;
     expect(
-      (animatedContainer.decoration! as BoxDecoration).color,
+      boxDecoration?.color ?? Colors.transparent,
       Colors.white,
     );
 
@@ -18,8 +20,11 @@ void main() {
 
     final animatedContainerAfterTap =
         tester.widget<AnimatedContainer>(find.byType(AnimatedContainer));
+
+    final boxDecorationAfterTap =
+        animatedContainerAfterTap.decoration as BoxDecoration?;
     expect(
-      (animatedContainerAfterTap.decoration! as BoxDecoration).color,
+      boxDecorationAfterTap?.color ?? Colors.transparent,
       isNot(Colors.white),
     );
   });
